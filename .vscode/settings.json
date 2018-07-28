@@ -1,4 +1,4 @@
 {
-    "flow.enabled": false,
-    "eslint.autoFixOnSave": true
+    "eslint.autoFixOnSave": true,
+    "flow.useNPMPackagedFlow": true
 }

@@ -1,3 +1,5 @@
+// @flow
+
 import { GraphQLSchema, GraphQLObjectType, GraphQLString } from "graphql";
 
 export const schema = new GraphQLSchema({
