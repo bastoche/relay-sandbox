@@ -1,0 +1,21 @@
+"""An object with an ID"""
+interface Node {
+  """The id of the object."""
+  id: ID!
+}
+
+type Query {
+  viewer: User
+
+  """Fetches an object given its ID"""
+  node(
+    """The ID of an object"""
+    id: ID!
+  ): Node
+}
+
+type User implements Node {
+  """The ID of an object"""
+  id: ID!
+  name: String
+}

@@ -3,25 +3,35 @@
   "scripts": {
     "lint": "eslint .",
     "format": "eslint . --fix",
+    "relay": "relay-compiler --src ./app --schema ./schema.graphql",
     "start": "babel-node server/index.js",
-    "validate": "yarn lint && yarn flow"
+    "update-schema": "babel-node ./scripts/updateSchema.js",
+    "validate": "yarn lint && yarn update-schema && yarn relay && yarn flow"
   },
   "dependencies": {
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
-    "graphql": "^0.13.2"
+    "graphql": "^0.13.2",
+    "graphql-relay": "^0.5.5",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-relay": "^1.6.0",
+    "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.6",
+    "babel-plugin-relay": "^1.6.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-flow": "^6.23.0",
     "eslint": "^5.2.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-flowtype": "^2.50.0",
     "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0",
     "flow-bin": "^0.77.0",
     "flow-typed": "^2.5.1",
-    "prettier": "^1.13.7"
+    "prettier": "^1.13.7",
+    "relay-compiler": "^1.6.0"
   }
 }
