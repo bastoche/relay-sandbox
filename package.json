@@ -3,7 +3,7 @@
   "scripts": {
     "lint": "eslint .",
     "format": "eslint . --fix",
-    "start": "babel-node src/server.js",
+    "start": "babel-node server/index.js",
     "validate": "yarn lint && yarn flow"
   },
   "dependencies": {

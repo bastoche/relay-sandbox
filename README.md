@@ -1,3 +1,3 @@
-# relay-sandbox-server
+# relay-sandbox
 
-A graphql server that will allow me to build a relay client
+A sandbox relay application
