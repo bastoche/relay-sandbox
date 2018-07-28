@@ -2,13 +2,18 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
-    "format": "eslint . --fix"
+    "format": "eslint . --fix",
+    "start": "babel-node src/index.js",
+    "validate": "yarn lint && yarn flow"
   },
   "dependencies": {
     "graphql": "^0.13.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
     "eslint": "^5.2.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-flowtype": "^2.50.0",
