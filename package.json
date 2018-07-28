@@ -3,10 +3,12 @@
   "scripts": {
     "lint": "eslint .",
     "format": "eslint . --fix",
-    "start": "babel-node src/index.js",
+    "start": "babel-node src/server.js",
     "validate": "yarn lint && yarn flow"
   },
   "dependencies": {
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
     "graphql": "^0.13.2"
   },
   "devDependencies": {
