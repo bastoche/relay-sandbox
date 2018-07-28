@@ -1,0 +1,4 @@
+{
+    "flow.enabled": false,
+    "eslint.autoFixOnSave": true
+}

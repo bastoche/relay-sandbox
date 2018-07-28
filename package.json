@@ -1,0 +1,15 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "format": "eslint . --fix"
+  },
+  "dependencies": {
+    "graphql": "^0.13.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "prettier": "^1.13.7"
+  }
+}
