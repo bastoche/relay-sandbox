@@ -1,11 +1,11 @@
 FROM node:10.7
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src
 
-COPY package.json /usr/src/app/package.json
+COPY package.json /usr/src/package.json
 RUN yarn install
 
-COPY . /usr/src/app/
+COPY . /usr/src/
 RUN yarn build
 
 # app
