@@ -23,4 +23,8 @@ jobs:
           paths:
             - ~/.cache/yarn
         
+      - run: yarn update-schema
+      
+      - run: yarn relay
+      
       - run: yarn validate
