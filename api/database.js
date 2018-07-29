@@ -3,7 +3,7 @@ import { User } from "./user";
 
 const VIEWER_ID = "me";
 
-const viewer = new User(VIEWER_ID, "Bobby");
+const viewer = new User(VIEWER_ID, "Viewer");
 
 export function getUser(id: string) {
   if (id === VIEWER_ID) {

@@ -1,6 +1,11 @@
 // @flow
 
-import { GraphQLSchema, GraphQLObjectType, GraphQLString } from "graphql";
+import {
+  GraphQLSchema,
+  GraphQLObjectType,
+  GraphQLString,
+  GraphQLNonNull
+} from "graphql";
 import { fromGlobalId, globalIdField, nodeDefinitions } from "graphql-relay";
 
 import { User } from "./user";
@@ -27,7 +32,7 @@ const GraphQLUser = new GraphQLObjectType({
   fields: {
     id: globalIdField("User"),
     name: {
-      type: GraphQLString
+      type: GraphQLNonNull(GraphQLString)
     }
   },
   interfaces: [nodeInterface]
