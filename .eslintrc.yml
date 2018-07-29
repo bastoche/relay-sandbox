@@ -11,3 +11,8 @@ extends:
   - plugin:import/warnings
   - plugin:prettier/recommended
   - plugin:react/recommended
+rules:
+  import/first: error
+  import/exports-last: error
+  import/order: [error, {newlines-between: always}]
+  import/newline-after-import: error

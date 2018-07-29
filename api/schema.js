@@ -1,10 +1,10 @@
 // @flow
 
 import { GraphQLSchema, GraphQLObjectType, GraphQLString } from "graphql";
-
 import { fromGlobalId, globalIdField, nodeDefinitions } from "graphql-relay";
 
-import { User, getUser, getViewer } from "./database";
+import { User } from "./user";
+import { getUser, getViewer } from "./database";
 
 const { nodeInterface, nodeField } = nodeDefinitions(
   globalId => {
