@@ -1,9 +1,10 @@
 // @flow
 
 import { Environment, Network, RecordSource, Store } from "relay-runtime";
+import { API_PORT } from "../config";
 
 function fetchQuery(operation, variables) {
-  return fetch("/graphql", {
+  return fetch(`http://localhost:${API_PORT}/graphql`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

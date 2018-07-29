@@ -1,5 +1,6 @@
 module.exports = {
   env: {
+    browser: true,
     node: true
   },
   globals: {
@@ -7,9 +8,9 @@ module.exports = {
   },
   parser: "babel-eslint",
   extends: [
+    "plugin:prettier/recommended",
     "eslint:recommended",
     "plugin:flowtype/recommended",
-    "plugin:prettier/recommended",
     "plugin:react/recommended"
   ]
 };

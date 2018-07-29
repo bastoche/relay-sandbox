@@ -4,7 +4,7 @@ import React from "react";
 import { graphql, QueryRenderer } from "react-relay";
 import environment from "./environment";
 
-export default class App extends React.Component<void> {
+export default class App extends React.Component<{||}> {
   render() {
     return (
       <QueryRenderer
@@ -24,7 +24,7 @@ export default class App extends React.Component<void> {
           if (!props) {
             return <div>Loading...</div>;
           }
-          return <div>Hello {props.viewer.name}</div>;
+          return <div>Hello, {props.viewer.name}!</div>;
         }}
       />
     );

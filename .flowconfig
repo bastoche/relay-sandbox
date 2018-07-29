@@ -1,4 +1,6 @@
 [ignore]
+# ignored because flow reports a parsing error in this file
+<PROJECT_ROOT>/node_modules/config-chain/test/broken.json
 
 [include]
 
