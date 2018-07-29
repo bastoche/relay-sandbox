@@ -1,0 +1,5 @@
+.cache
+__generated__
+dist
+node_modules
+schema.graphql

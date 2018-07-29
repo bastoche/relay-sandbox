@@ -1,6 +1,7 @@
 {
   "license": "MIT",
   "scripts": {
+    "build": "yarn update-schema && yarn relay",
     "format:api": "eslint api --fix",
     "format:app": "eslint app --fix",
     "format": "yarn format:api && yarn format:app",
@@ -9,11 +10,11 @@
     "lint:scripts": "eslint scripts",
     "lint": "yarn lint:api && yarn lint:app && yarn lint:scripts",
     "relay": "relay-compiler --src ./app --schema ./schema.graphql",
-    "start:api": "nodemon api/index.js --exec babel-node",
-    "start:app": "parcel app/index.html",
+    "start:api": "nodemon --watch api --exec babel-node api/index.js ",
+    "start:app": "parcel app/index.html --port 3000 --hmr-port 3001",
     "start": "yarn start:api & yarn start:app",
     "update-schema": "babel-node ./scripts/updateSchema.js",
-    "validate": "yarn lint && yarn update-schema && yarn relay && yarn flow"
+    "validate": "yarn build && yarn lint && yarn flow"
   },
   "dependencies": {
     "cors": "^2.8.4",
