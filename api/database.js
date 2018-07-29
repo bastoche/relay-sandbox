@@ -9,7 +9,7 @@ const VIEWER_ID = "me";
 
 const viewer = new User();
 viewer.id = VIEWER_ID;
-viewer.name = "Toto";
+viewer.name = "Bobby";
 
 const usersById = {
   [VIEWER_ID]: viewer

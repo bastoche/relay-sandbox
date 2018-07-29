@@ -8,7 +8,7 @@
     "lint:app": "eslint app",
     "lint": "yarn lint:api && yarn lint:app",
     "relay": "relay-compiler --src ./app --schema ./schema.graphql",
-    "start:api": "babel-node api/index.js",
+    "start:api": "nodemon api/index.js --exec babel-node",
     "start:app": "parcel app/index.html",
     "start": "yarn start:api & yarn start:app",
     "update-schema": "babel-node ./scripts/updateSchema.js",
@@ -38,6 +38,7 @@
     "eslint-plugin-react": "^7.10.0",
     "flow-bin": "^0.77.0",
     "flow-typed": "^2.5.1",
+    "nodemon": "^1.18.3",
     "parcel-bundler": "^1.9.7",
     "prettier": "^1.13.7",
     "relay-compiler": "^1.6.0"
