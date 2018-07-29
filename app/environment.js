@@ -1,6 +1,7 @@
 // @flow
 
 import { Environment, Network, RecordSource, Store } from "relay-runtime";
+
 import { API_PORT } from "../config";
 
 function fetchQuery(operation, variables) {

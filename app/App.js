@@ -2,6 +2,7 @@
 
 import React from "react";
 import { graphql, QueryRenderer } from "react-relay";
+
 import environment from "./environment";
 
 export default class App extends React.Component<{||}> {

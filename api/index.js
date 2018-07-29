@@ -4,8 +4,9 @@ import cors from "cors";
 import express from "express";
 import graphqlHTTP from "express-graphql";
 
-import { schema } from "./schema";
 import { API_PORT } from "../config";
+
+import { schema } from "./schema";
 
 const app = express();
 
