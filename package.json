@@ -22,8 +22,7 @@
     "graphql-relay": "^0.5.5",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-relay": "^1.6.0",
-    "whatwg-fetch": "^2.0.4"
+    "react-relay": "^1.6.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -34,6 +33,7 @@
     "eslint": "^5.2.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.10.0",
     "flow-bin": "^0.77.0",
