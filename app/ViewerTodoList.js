@@ -15,7 +15,7 @@ export default class ViewerTodoList extends React.Component<{||}> {
           query ViewerTodoListQuery {
             viewer {
               id
-              ...TodoList_userTodoData
+              ...TodoList_userTodoData @relay(mask: false)
             }
           }
         `}
@@ -36,7 +36,6 @@ export default class ViewerTodoList extends React.Component<{||}> {
           return (
             <div>
               <div>Todo list for User {props.viewer.id}:</div>
-              {/* $FlowFixMe waiting for release of https://github.com/facebook/relay/pull/2293 */}
               <TodoList userTodoData={props.viewer} />
             </div>
           );
