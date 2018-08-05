@@ -36,7 +36,7 @@ export default class ViewerTodoList extends React.Component<{||}> {
           return (
             <div>
               <div>Todo list for User {props.viewer.id}:</div>
-              {/* $FlowFixMe */}
+              {/* $FlowFixMe waiting for release of https://github.com/facebook/relay/pull/2293 */}
               <TodoList userTodoData={props.viewer} />
             </div>
           );

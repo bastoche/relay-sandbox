@@ -23,7 +23,7 @@ class TodoList extends React.Component<Props> {
             todos.edges.map(edge => {
               const node = edge && edge.node;
               if (node) {
-                // $FlowFixMe
+                // $FlowFixMe waiting for release of https://github.com/facebook/relay/pull/2293
                 return <Todo key={node.id} todo={node} />;
               }
               return null;
