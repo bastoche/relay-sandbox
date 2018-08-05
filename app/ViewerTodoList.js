@@ -1,20 +1,21 @@
 // @flow
-
 import React from "react";
 import { graphql, QueryRenderer } from "react-relay";
 
+import type { ViewerTodoListQueryResponse } from "./__generated__/ViewerTodoListQuery.graphql";
+import TodoList from "./TodoList";
 import environment from "./environment";
-import type { AppQueryResponse } from "./__generated__/AppQuery.graphql";
 
-export default class App extends React.Component<{||}> {
+export default class ViewerTodoList extends React.Component<{||}> {
   render() {
     return (
       <QueryRenderer
         environment={environment}
         query={graphql`
-          query AppQuery {
+          query ViewerTodoListQuery {
             viewer {
-              name
+              id
+              ...TodoList_userTodoData
             }
           }
         `}
@@ -24,7 +25,7 @@ export default class App extends React.Component<{||}> {
           props
         }: {
           error: ?Error,
-          props: ?AppQueryResponse
+          props: ?ViewerTodoListQueryResponse
         }) => {
           if (error) {
             return <div>Error!</div>;
@@ -32,12 +33,13 @@ export default class App extends React.Component<{||}> {
           if (!props) {
             return <div>Loading...</div>;
           }
-          if (!props.viewer) {
-            return <div>Hello, stranger!</div>;
-          }
-          if (props.viewer) {
-            return <div>Hello, {props.viewer.name}!</div>;
-          }
+          return (
+            <div>
+              <div>Todo list for User {props.viewer.id}:</div>
+              {/* $FlowFixMe */}
+              <TodoList userTodoData={props.viewer} />
+            </div>
+          );
         }}
       />
     );
