@@ -2,6 +2,7 @@
 
 import {
   GraphQLBoolean,
+  GraphQLID,
   GraphQLNonNull,
   GraphQLObjectType,
   GraphQLSchema,
@@ -13,6 +14,7 @@ import {
   connectionFromArray,
   fromGlobalId,
   globalIdField,
+  mutationWithClientMutationId,
   nodeDefinitions
 } from "graphql-relay";
 import type { ConnectionArguments } from "graphql-relay";
@@ -20,8 +22,9 @@ import type { ConnectionArguments } from "graphql-relay";
 import { User, toUserId } from "./model/user";
 import { Todo, toTodoId } from "./model/todo";
 import { getUser, addUser } from "./services/user";
-import { addTodo, getTodo, getTodos } from "./services/todo";
+import { addTodo, getTodo, getTodos, changeTodoStatus } from "./services/todo";
 
+// queries
 const { nodeInterface, nodeField } = nodeDefinitions(
   globalId => {
     const { type, id } = fromGlobalId(globalId);
@@ -89,6 +92,33 @@ const Query = new GraphQLObjectType({
   }
 });
 
+// mutations
+const GraphQLChangeTodoStatusMutation = mutationWithClientMutationId({
+  name: "ChangeTodoStatus",
+  inputFields: {
+    complete: { type: new GraphQLNonNull(GraphQLBoolean) },
+    id: { type: new GraphQLNonNull(GraphQLID) }
+  },
+  outputFields: {
+    todo: {
+      type: GraphQLTodo,
+      resolve: ({ todoId }) => getTodo(todoId)
+    }
+  },
+  mutateAndGetPayload: ({ id, complete }) => {
+    const todoId = toTodoId(fromGlobalId(id).id);
+    changeTodoStatus(todoId, complete);
+    return { todoId };
+  }
+});
+
+const Mutation = new GraphQLObjectType({
+  name: "Mutation",
+  fields: {
+    changeTodoStatus: GraphQLChangeTodoStatusMutation
+  }
+});
+
 // fake authentication
 const VIEWER_ID = toUserId("VIEWER_ID");
 addUser(new User(VIEWER_ID, "Viewer"));
@@ -97,6 +127,8 @@ addUser(new User(VIEWER_ID, "Viewer"));
 addTodo(VIEWER_ID, new Todo("done", true));
 addTodo(VIEWER_ID, new Todo("not done", false));
 
+// finally, the schema
 export const schema = new GraphQLSchema({
-  query: Query
+  query: Query,
+  mutation: Mutation
 });

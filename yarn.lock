@@ -8,16 +8,6 @@
   dependencies:
     "@babel/highlight" "7.0.0-beta.44"
 
-"@babel/generator@7.0.0-beta.40":
-  version "7.0.0-beta.40"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.0.0-beta.40.tgz#ab61f9556f4f71dbd1138949c795bb9a21e302ea"
-  dependencies:
-    "@babel/types" "7.0.0-beta.40"
-    jsesc "^2.5.1"
-    lodash "^4.2.0"
-    source-map "^0.5.0"
-    trim-right "^1.0.1"
-
 "@babel/generator@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.0.0-beta.44.tgz#c7e67b9b5284afcf69b309b50d7d37f3e5033d42"
@@ -25,6 +15,16 @@
     "@babel/types" "7.0.0-beta.44"
     jsesc "^2.5.1"
     lodash "^4.2.0"
+    source-map "^0.5.0"
+    trim-right "^1.0.1"
+
+"@babel/generator@7.0.0-beta.54":
+  version "7.0.0-beta.54"
+  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.0.0-beta.54.tgz#c043c7eebeebfd7e665d95c281a4aafc83d4e1c9"
+  dependencies:
+    "@babel/types" "7.0.0-beta.54"
+    jsesc "^2.5.1"
+    lodash "^4.17.5"
     source-map "^0.5.0"
     trim-right "^1.0.1"
 
@@ -56,6 +56,10 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
+"@babel/parser@7.0.0-beta.54":
+  version "7.0.0-beta.54"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.0.0-beta.54.tgz#c01aa63b57c9c8dce8744796c81d9df121f20db4"
+
 "@babel/template@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0-beta.44.tgz#f8832f4fdcee5d59bf515e595fc5106c529b394f"
@@ -80,20 +84,20 @@
     invariant "^2.2.0"
     lodash "^4.2.0"
 
-"@babel/types@7.0.0-beta.40":
-  version "7.0.0-beta.40"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.40.tgz#25c3d7aae14126abe05fcb098c65a66b6d6b8c14"
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.2.0"
-    to-fast-properties "^2.0.0"
-
 "@babel/types@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.44.tgz#6b1b164591f77dec0a0342aca995f2d046b3a757"
   dependencies:
     esutils "^2.0.2"
     lodash "^4.2.0"
+    to-fast-properties "^2.0.0"
+
+"@babel/types@7.0.0-beta.54":
+  version "7.0.0-beta.54"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.54.tgz#025ad68492fed542c13f14c579a44c848e531063"
+  dependencies:
+    esutils "^2.0.2"
+    lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
@@ -524,8 +528,8 @@ babel-plugin-check-es2015-constants@^6.22.0, babel-plugin-check-es2015-constants
     babel-runtime "^6.22.0"
 
 babel-plugin-relay@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-relay/-/babel-plugin-relay-1.6.0.tgz#a224da524362d6903a524214a1b840530fdfbd28"
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-relay/-/babel-plugin-relay-1.6.2.tgz#f47f534ecbb04ac167b139b54d50c5d39d7e520c"
   dependencies:
     babel-runtime "^6.23.0"
     babel-types "^6.24.1"
@@ -566,7 +570,7 @@ babel-plugin-transform-async-to-generator@^6.22.0:
     babel-plugin-syntax-async-functions "^6.8.0"
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-class-properties@^6.8.0:
+babel-plugin-transform-class-properties@^6.24.1, babel-plugin-transform-class-properties@^6.8.0:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-class-properties/-/babel-plugin-transform-class-properties-6.24.1.tgz#6a79763ea61d33d36f37b611aa9def81a81b46ac"
   dependencies:
@@ -847,7 +851,7 @@ babel-preset-env@^1.7.0:
     invariant "^2.2.2"
     semver "^5.3.0"
 
-babel-preset-fbjs@^2.1.4:
+babel-preset-fbjs@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/babel-preset-fbjs/-/babel-preset-fbjs-2.2.0.tgz#c25b879a914feefd964052b1bce4c90ee915023a"
   dependencies:
@@ -945,10 +949,6 @@ babylon-walk@^1.0.2:
     babel-runtime "^6.11.6"
     babel-types "^6.15.0"
     lodash.clone "^4.5.0"
-
-babylon@7.0.0-beta.40:
-  version "7.0.0-beta.40"
-  resolved "https://registry.yarnpkg.com/babylon/-/babylon-7.0.0-beta.40.tgz#91fc8cd56d5eb98b28e6fde41045f2957779940a"
 
 babylon@7.0.0-beta.44:
   version "7.0.0-beta.44"
@@ -2257,8 +2257,8 @@ eslint-visitor-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
 eslint@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.2.0.tgz#3901ae249195d473e633c4acbc370068b1c964dc"
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.3.0.tgz#53695aca5213968aacdf970ccb231e42a2b285f8"
   dependencies:
     ajv "^6.5.0"
     babel-code-frame "^6.26.0"
@@ -2291,7 +2291,7 @@ eslint@^5.2.0:
     path-is-inside "^1.0.2"
     pluralize "^7.0.0"
     progress "^2.0.0"
-    regexpp "^1.1.0"
+    regexpp "^2.0.0"
     require-uncached "^1.0.3"
     semver "^5.5.0"
     string.prototype.matchall "^2.0.0"
@@ -2503,7 +2503,7 @@ fast-diff@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.1.2.tgz#4b62c42b8e03de3f848460b639079920695d0154"
 
-fast-glob@^2.0.0, fast-glob@^2.2.2:
+fast-glob@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-2.2.2.tgz#71723338ac9b4e0e2fff1d6748a2a13d5ed352bf"
   dependencies:
@@ -2528,7 +2528,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.14, fbjs@^0.8.16:
+fbjs@0.8.17, fbjs@^0.8.16:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   dependencies:
@@ -2865,9 +2865,9 @@ grapheme-breaker@^0.3.2:
     brfs "^1.2.0"
     unicode-trie "^0.3.1"
 
-graphql-compiler@1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/graphql-compiler/-/graphql-compiler-1.6.0.tgz#24f146cdf88b80e045322a572a1a5d84b9c2a9d5"
+graphql-compiler@1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/graphql-compiler/-/graphql-compiler-1.6.2.tgz#45dfd1095f8af087e0c963d028831abde07dc605"
   dependencies:
     chalk "^1.1.1"
     fb-watchman "^2.0.0"
@@ -3080,8 +3080,8 @@ ignore-walk@^3.0.1:
     minimatch "^3.0.4"
 
 ignore@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.2.tgz#0a8dd228947ec78c2d7f736b1642a9f7317c1905"
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.3.tgz#e2d58c9654d75b542529fa28d80ac95b29e4f467"
 
 immutable@~3.7.6:
   version "3.7.6"
@@ -4987,8 +4987,8 @@ preserve@^0.2.0:
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
 prettier@^1.13.7:
-  version "1.13.7"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.7.tgz#850f3b8af784a49a6ea2d2eaa7ed1428a34b7281"
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.0.tgz#847c235522035fd988100f1f43cf20a7d24f9372"
 
 private@^0.1.6, private@^0.1.8:
   version "0.1.8"
@@ -5156,8 +5156,8 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     strip-json-comments "~2.0.1"
 
 react-dom@^16.4.1:
-  version "16.4.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.4.1.tgz#7f8b0223b3a5fbe205116c56deb85de32685dad6"
+  version "16.4.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.4.2.tgz#4afed569689f2c561d2b8da0b819669c38a0bda4"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -5165,17 +5165,17 @@ react-dom@^16.4.1:
     prop-types "^15.6.0"
 
 react-relay@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-1.6.0.tgz#7a0eca435c81b9b01d8917d4bca6507eefbcdfe4"
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-1.6.2.tgz#2e48480390b327dbf28cb0d97420db64fae4bda6"
   dependencies:
     babel-runtime "^6.23.0"
-    fbjs "^0.8.14"
+    fbjs "0.8.17"
     prop-types "^15.5.8"
-    relay-runtime "1.6.0"
+    relay-runtime "1.6.2"
 
 react@^16.4.1:
-  version "16.4.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.4.1.tgz#de51ba5764b5dbcd1f9079037b862bd26b82fe32"
+  version "16.4.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.4.2.tgz#2cd90154e3a9d9dd8da2991149fdca3c260e129f"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -5305,9 +5305,9 @@ regexp.prototype.flags@^1.2.0:
   dependencies:
     define-properties "^1.1.2"
 
-regexpp@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/regexpp/-/regexpp-1.1.0.tgz#0e3516dd0b7904f413d2d4193dce4618c3a689ab"
+regexpp@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/regexpp/-/regexpp-2.0.0.tgz#b2a7534a85ca1b033bcf5ce9ff8e56d4e0755365"
 
 regexpu-core@^2.0.0:
   version "2.0.0"
@@ -5341,32 +5341,32 @@ regjsparser@^0.1.4:
     jsesc "~0.5.0"
 
 relay-compiler@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/relay-compiler/-/relay-compiler-1.6.0.tgz#0a1bc8d28c1cf31d8985108a761ba6c0db48d4a1"
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/relay-compiler/-/relay-compiler-1.6.2.tgz#845e27bb446e993524d176b0ef4593c9757ed662"
   dependencies:
-    "@babel/generator" "7.0.0-beta.40"
-    "@babel/types" "7.0.0-beta.40"
+    "@babel/generator" "7.0.0-beta.54"
+    "@babel/parser" "7.0.0-beta.54"
+    "@babel/types" "7.0.0-beta.54"
     babel-polyfill "^6.20.0"
-    babel-preset-fbjs "^2.1.4"
+    babel-preset-fbjs "2.2.0"
     babel-runtime "^6.23.0"
     babel-traverse "^6.26.0"
-    babylon "7.0.0-beta.40"
     chalk "^1.1.1"
-    fast-glob "^2.0.0"
+    fast-glob "^2.2.2"
     fb-watchman "^2.0.0"
-    fbjs "^0.8.14"
-    graphql-compiler "1.6.0"
+    fbjs "0.8.17"
+    graphql-compiler "1.6.2"
     immutable "~3.7.6"
-    relay-runtime "1.6.0"
+    relay-runtime "1.6.2"
     signedsource "^1.0.0"
     yargs "^9.0.0"
 
-relay-runtime@1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-1.6.0.tgz#2b70058fb77a4c93a171752ce147f8ee8d8a88b9"
+relay-runtime@1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-1.6.2.tgz#5ecd43d92799e761454200b455dd1c0cb0259659"
   dependencies:
     babel-runtime "^6.23.0"
-    fbjs "^0.8.14"
+    fbjs "0.8.17"
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"

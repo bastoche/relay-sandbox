@@ -29,3 +29,8 @@ export function getTodos(userId: UserId) {
   }
   return [];
 }
+
+export function changeTodoStatus(todoId: TodoId, complete: boolean) {
+  const todo = getTodo(todoId);
+  todo.complete = complete;
+}
