@@ -1,4 +1,5 @@
 # relay-sandbox
+[![CircleCI](https://circleci.com/gh/bastoche/relay-sandbox.svg?style=svg)](https://circleci.com/gh/bastoche/relay-sandbox)
 
 A sandbox relay application
 
