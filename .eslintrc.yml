@@ -12,6 +12,7 @@ extends:
   - plugin:prettier/recommended
   - plugin:react/recommended
 rules:
+  object-shorthand: error
   import/first: error
   import/exports-last: error
   import/order: [error, {newlines-between: always}]

@@ -13,12 +13,24 @@ const mutation = graphql`
   }
 `;
 
+function getOptimisticResponse(complete: boolean, todoId: string) {
+  return {
+    changeTodoStatus: {
+      todo: {
+        complete,
+        id: todoId
+      }
+    }
+  };
+}
+
 function commit(environment: Environment, complete: boolean, todoId: string) {
   return commitMutation(environment, {
     mutation,
     variables: {
       input: { complete, id: todoId }
-    }
+    },
+    optimisticResponse: getOptimisticResponse(complete, todoId)
   });
 }
 
